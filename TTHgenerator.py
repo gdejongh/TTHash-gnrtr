@@ -2,6 +2,16 @@ import numpy as np
 
 from operator import add
 
+from click._compat import raw_input
+import git
+
+# repo = git.Repo()
+# o = repo.remotes.origin
+# o.pull()
+
+g = git.Git()
+g.pull('origin','master')
+
 def toTTH(nums):
     # convert nums into numpy array then into matrix
     nums = np.asarray(nums)
